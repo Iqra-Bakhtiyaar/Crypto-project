@@ -1,0 +1,97 @@
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title> Mining </title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:admins" content="{https://www.facebook.com/iqra.rahmani}"/>
+    <!-- insert libraries for bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Create navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container-fluid">
+          <div class="navbar-header">
+             <!-- Create toggle button for navigation abar for small screens -->
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href= "index.html"> TuneInCrypto</a>
+         </div>
+          
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+        
+     <li><a href="index.html"> Home </a> </li>
+    <li>   <a href="blockchain.html"> Blockchain</a> </li>
+        <li>  <a href="bitcoin.html"> Bitcoin </a> </li>
+        <li>  <a href="hashingFunction.html"> Hashing </a> </li>
+         <li> <a href="ethereum.html"> Ethereum </a> </li>
+         <li> <a href="rchain.html"> RChain </a> </li>
+         <li> <a href="cardano.html"> Cardano </a> </li>
+         <li> <a href="litecoin.html"> Litecoin </a> </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="container" style="background-color: #eff1f4;>
+<div class="row">
+   <div class= "col-md-9">
+<h1> MINING </h1>
+                  <b> Note: This mining section talks about bitcoin mining. </b>
+                  <p> The main incentive for mining is to include a new block into the Blockchain. Miners from all around the world work to add new blocks into the Blockchain to ensure that Blockchain grow as new transactions are carried out. In the beginning, one could mine bitcoins using their laptop, however as more people started mining it became more difficult to mine due to bitcoin’s scarcity. If people could mine all the bitcoins, they would have finished bitcoins long time ago. Moreover, a certain gap is needed between the creation of each block. This time gap is different for different currencies. In bitcoin, the time limit is 10 minutes. Therefore, a difficulty level is set to restrict the block creation. This difficulty level fluctuates with the number of miners. The difficulty level increases when more people are mining and decreases when less people mine.
+                     When a new block is ready to be added to the Blockchain, all the items of the block are first hashed. If the hash is smaller than the difficulty target, it is added to the Blockchain because if a hash is higher than the difficulty target people will not be able to solve it. Once a block is added to the Blockchain, everyone in the community accepts the new block.
+                  </p>
+                 However, this is not the case. In reality, a very lucky person will get a block like that. </br>
+                     This is where nonce is needed. A nonce is a random bit string. </br>
+                  <h4> Following are the steps of mining in a normal scenario </h4>
+                  <ol type="1">
+                     <li>  The hash of the new block is taken and appended with the nonce. </li>
+                     <li> The newly generated string (in step 1) is hashed again. </li>
+                     <li> This final hash is checked if it is less than the difficulty level. </li>
+                     <li> If the answer to previous step is no, then a nonce is generated again and compared. The process is repeated until the answer is yes. </li>
+                     <li>  The new block is generated and added to the Blockchain. </li>
+                     <li>  The miners are rewarded with bitcoins. </li>
+                  </ol>
+                  Here the puzzle friendliness property is recalled. </br>
+                  In bitcoin mining: </br>
+                  X= hash of the block </br>
+                  K= nonce </br>
+                  Y= difficulty target</br>
+               </div>
+            </div>
+    <div class="container text-center">
+     <div class="row" style="font-size: 15px">
+     
+
+        <h3 class="footer" >About Us</h3>
+        <br>
+        <div class="col-md-4">
+           <center>
+              <img src="images/my.jpg" class="img-circle" alt="user" style="width:70px">
+              <br>
+              <h4> Author </h4>
+   <p class="footertext">Iqra Bakhtiyaar<br>
+   <p> Contact me </p>
+            <p> IB279@live.mdx.ac.uk </p>
+        </center>
+      </div>
+      <div class="col-md-4">
+          <center>
+            <img src="images/supervisor.jpg" class="img-circle" alt="Supervisor" style="length: 80px; width:80px;">
+            <br>
+            <h4> Supervisor</h4>
+            <p class="footertext">Prof. Raja Nagarajan<br>
+              </center>
+            </div>
+         </div>
+  </body> 
+  </html>
