@@ -1,0 +1,146 @@
+  <?php
+   include 'navigation.php';
+   head("Hashing");
+   navigate ("Hashing");
+   ?> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+<div class="sidenav">
+  <a href="mining.php">Bitcoin mining</a>
+  <a href="ethos.php">Ethos mining</a>
+</div>
+<div class="main">
+    <!-- Create container for hashing function -->
+         <div class= "container" id= "hashing-function" style="background-color: #eff1f4; color: black; padding: 100px 100px 100px 100px "  >
+            <div class="row">
+               <div class="col-md-12">
+                  <h1> HASHING FUNCTION </h1>
+                  <p> Hashing function is one of the basic concepts to understand in cryptocurrencies because it is the base of mining. A hashing function takes input of any size bit string and gives a fixed length output. </p>
+                  <img src="images/hash1.png" class="img-responsive" alt="hash function" style="height: 210px; margin-top: 30px;"> 
+                  <div class="caption">
+                     <p> Image courtesy: Blockgeeks </p>
+                  </div>
+                  <p>  It can be seen that the output is same size for both Hi and Welcome. 
+                     This functionality becomes very beneficial when we need to deal with a huge amount of data because instead of keeping record of a massive input, only the hash of input can be remembered to keep track. The output of a hash function for a given input can be computed efficiently within a reasonable time.
+                  </p>
+                  <hr>
+                  <h2> CRYPTOGRAPHIC HASH FUNCTION</h2>
+                  <p> Cryptographic hash function has some properties. These properties make these functions secure and reliable.
+                  <h3> PROPERTY 1: DETERMINISTIC </h3>
+                  <p> This property requires the output of a certain input to be same regardless of how many times the input is compiled. If different results are generated each time it will not be possible to keep track of the input. </p>
+                  <h3> PROPERTY 2: QUICK COMPUTATION </h3>
+                  <p> A hashing function should be efficient enough to generate the hash of an input in high speed. A slow process will affect the efficiency of the system. </p>
+                  <h3> PROPERTY 3: COLLISION RESISTANCE </h3>
+                  <p> Another property that a cryptographic function needs to hold is collision resistance. This collision occurs when two distinctive inputs generate the same output. </br>
+                     x ≠ y, yet H(x)= H(y)  </br>
+                     Here x ≠ y, however the output of both is equal or same.  </br>
+                     A hash function is considered to be collision resistant if no collision can be found. Here it is important to notice saying that a collision cannot be found does not mean that collision does not exist. 
+                  </p>
+                  </br>
+                  <h4> WHAT COLLISION RESISTANCE IS USEFUL FOR? </h4>
+                  <p> This property can be used for security purposes. 
+                     For instance, Alice saves a file to an online storage system and when she downloads it the next time she wants to know if the file has not been modified. One way of doing it is that she can store a copy of a file in her computer and then compare it with the one she downloaded but this eliminates the whole point of saving the file online if she has to use one stored in her computer. Another way of achieving integrity is using the collision resistance property. In cryptography integrity means that the data has not been modified. Alice can compute the hash output of the file and later on when she downloads the file she can compute the hash function and if the output is same it means that file has not been modified because we assume hashing function to be collision resistant. Different inputs cannot have the same output therefore the file must be the same but if the output is different it means that the file has been compromised. 
+                  </p>
+                  <h3> PROPERTY 4: PRE-IMAGE RESISTANCE </h3>
+                  <p> This property states that giving H(A) it is infeasible to find A. where A is input and H(A) is the output. Here the point to consider is that it is “infeasible” to find the input but not “impossible”.  For instance, on rolling a dice we end up with a hash H(A). To find what the original number(A) was, we will have to compute the hashes 1-6 and whatever number’s hash matches that number is A. However, this method of finding A will only work when data is less. Suppose, if we need to find a 128-bit hash. The only method that can be used to find A is “brute-force method”. In this method, to find A we will have to compute the hash of each and every input and compare it with the target hash until we find the solution. </br>
+                     On using this method one of the following 3 scenarios will occur: </br>
+                     <b> 1.  Best case scenario </b> </br>
+                     The answer is found on first try and the person would be extremely lucky if this happens. </br>
+                     <b> 2.  Worst case scenario </b> </br>
+                     The answer is found after checking each and every input (2^128 – 1 times). </br>
+                     <b> 3.  It is found somewhere in the middle </b> </br>
+                     2^128/2= 1.7 X 10^38 </br>
+                     Which is a huge number too.
+                     In essence, it is possible to find the input by brute-force method but it is extremely time consuming and hard that this possibility can be neglected.
+                  <h3> PROPERTY 5: SMALL CHANGE MAKES BIG CHANGES </h3>
+                  One of the property of hash function is that even small change in the input make big difference to the output of the hash
+                  <img src= "images/hash2.png" alt= "hashing function"  class="img-responsive"  style="height: 180px;">
+                  <div class="caption">
+                     <p> Image courtesy: Blockgeeks </p>
+                  </div>
+                  <p> It can be seen clearly that in input 2 even changing just first letter from Capital to Small has changed the whole hash output. This functionality of hashing function makes Blockchain immensely secure because it ensures that Blockchain is immutable. </br>
+                  <h3>PROPERTY 6: PUZZLE FRIENDLINESS </h3>
+                  This property is base of mining which will be discussed later in mining section.
+                  This property states: </br>
+                  “For every output “Y”, if k is chosen from a distribution with high min-entropy it is infeasible to find an input x such that H(k | x) = Y.” 
+                  To understand this property, it is crucial to understand each and every term. </p>
+                  <b> 1.  High min entropy </b> </br>
+                  This property means that the chosen value is hugely distributed that selecting a random value from that distribution will have negligible probability to be found. In simple words, if a value is chosen from 1-6, that’s a low min-entropy distribution and if a value is chosen between 1 and gazillion, that is a high-min entropy. </br>
+                  <img src= "images/puzzle.png" alt= "puzzle friendliness"  class="img-responsive" style="margin: 30px 0px 30px 0px;"> </br>
+                  Now if the definition is revised in a simplistic way
+                  <ul>
+                     <li>  x is concatenated with k 
+                        (k | x) </br>
+                        while k is chosen from a large distribution 
+                     </li>
+                     <li> then hash function is applied to it </br>
+                        H (k | x) </br>
+                        produces the output Y. </br>
+                        H (k | x) =Y 
+                     </li>
+                  </ul>
+                  x is concatenated with k so x becomes infeasible to found. The point to be noted here is x is infeasible to found not impossible. 
+                  <hr>
+                  <h2> EXAMPLES OF CRYPTOGRAPHIC HASH FUNCTIONS </h2>
+                  <h4> MD 5 </h4>
+                  generates a 128-bit hash.
+                  <h4> SHA 1 </h4>
+                  Generates a 160-bit hash 
+                  <h4> SHA 256 </h4>
+                  Generates a 256-bit hash. Bitcoin uses 256-bit hash algorithm. </br>
+                  <h4> Keccak-256 </h4>
+                  It produces 256 bit-hash and used by Ethereum.
+                  <hr>
+                  <h1> HASHING AND BLOCKCHAIN </h1>
+                  A data structure is used for storing data. To understand how Blockchain works it is important to learn about two data structure properties. </br>
+                  1.  Pointers </br>
+                  2.  Linked Lists </br>
+                  <h4> POINTERS </h4>
+                  In programming the variable which stores the address of another variable are called pointers. Therefore, they are called pointers because they point towards the address of another variable. </br>
+                  <h4> LINKED LISTS </h4>
+                  A linked list is a significant element in data structures. </br>
+                  <img src= "images/image3.png" alt= "Linked list"  class="img-responsive" style="height: 500px; margin: 30px 10px 10px 10px"> </br>
+                  <div class="caption">
+                     <p> Image courtesy: Blockgeeks </p>
+                  </div>
+                  The image shown above is a sequence of blocks and each block is linked to the next block with a pointer. In this scenario, pointer is storing the address of the next block and this is how a connection is made between pointers. The value of last node’s pointer is null which means it has no address stored. Now where is the pointer stored for the first block? The pointer of first block stays in its system and first block is called “genesis block”. </br>
+                  It was a general introduction to pointers now the hash pointer will be explained. </br>
+                  <hr>
+                  <h2> Hash pointer </h2>
+                  The structure of Blockchain is based on hash pointers and a linked list of blocks.  </br>
+                  <img src= "images/image5.png" alt= "Hash pointer"  class="img-responsive" style= "margin: 30px 10px 10px 10px"> </br>
+                  <div class="caption">
+                     <p> Image courtesy: Blockgeeks </p>
+                  </div>
+                  The image above shows a simplified bitcoin blockchain. A Blockchain is a linked list (chain) and every block includes data and a hash pointer which points to its previous block. The hash pointer of the Blockchain not only contains the address of the previous block but also contains the hash of the data of the previous block. This phenomenon makes Blockchain extremely reliable.   </br>
+                  Let’s suppose if an intruder tries to change data. A small change will change the hash significantly (property 5). Any changes made to block 3 will change the hash of the block 2 and in result will also change the data in block 2 and changes to block 2 will change the block 1 and so on. Eventually, it will modify the whole chain which is impossible. </br>
+                  <hr>
+                  <h1> MERKLE TREE AND BLOCKCHAIN </h1>
+                  <h2> MERKLE TREE USE IN BLOCKCHAIN </h2>
+                  There are thousands and thousands of transactions in each block. it will be very time-consuming and heavy to find a specific transaction as data is huge. However, if the data is stored in merkle trees, it will be a lot easier to check if a particular transaction is part of a block or not. </br>
+                  <h2> A merkle tree </h2>
+                  <img src= "images/merkle.png" alt= "merkle tree"  class="img-responsive" style= "margin: 30px 10px 10px 10px"> </br>
+                  <div class="caption">
+                     <p> Image courtesy: Wikipedia </p>
+                  </div>
+                  In merkle tree, every non-leaf node contains the hash of the child nodes’ values. Child nodes are the nodes which feed into their parent nodes. For example, as shown in the image “hash 0-0” and “hash 0-1” are the child nodes of the “hash 0”. L1, L2, L3, L4 are the leaf nodes and rest are the non-leaf nodes.</br>
+                  <img src= "images/image12.png" alt= "Merkle Tree"  class="img-responsive" style= "height: 300px; margin: 30px 10px 10px 10px"> </br>
+                  <div class="caption">
+                     <p> Image courtesy: Coursera </p>
+                  </div>
+                  If a particular data is needed to be found. The following procedure will occur.
+                  <img src= "images/image10.png" alt= "Merkle Tree"  class="img-responsive" style= "height: 300px; margin: 30px 10px 10px 10px" > </br>
+                  It can be seen that there is no exhaustive search and data is tracked by simply following the hash series. </br>
+                  <img src= "images/image11.png" alt= "Merkle Tree"  class="img-responsive" style= "height: 500px; margin: 30px 10px 10px 10px" > </br>
+                  In essence, in merkle trees big data is divided into smaller parts for efficiency of the Blockchain.
+                  
+                  <hr>
+                  
+               </div>
+            </div>
+         </div>
+
+</div>
+         <!-- Include footer -->
+         <?php
+         footer ();
+         ?>

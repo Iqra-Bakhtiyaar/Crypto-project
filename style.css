@@ -1,0 +1,74 @@
+body {
+	font-size: 18px;
+	}
+
+
+  .navbar-nav li.active a {
+      background-color: #29292c !important;
+  }
+  
+
+h1 {
+	color: dark-grey;
+	font-family: Times new roman;
+}
+
+h2, h3 {
+	font-family: Montserrat, sans-serif;
+	 letter-spacing: 4px;
+	
+}
+
+
+
+.container{
+	margin: 100px;
+}
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+       letter-spacing: 4px;
+      background-color: #2d2d30;    
+      font-size: 13px; 
+      opacity: 0.9;
+  }
+  
+  hr {
+  border-color: black;
+  }
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed; /* Fix the side nav regardless of scroll */
+    padding-top: 20px;
+    margin-top: 100px;
+    border-color: black;
+}
+
+.sidenav a {
+    padding: 6px 18px 6px 16px;
+    font-size: 25px;
+    color: black;
+    display: block;
+    font-family: times new roman;
+}
+
+.sidenav a:hover {
+    color: blue;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+p {
+  padding-top: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,152 @@
+<?php
+   include 'navigation.php';
+   head("Crypto Currencies");
+   navigate ("Cardano");
+   ?>
+         <link rel="stylesheet" type="text/css" href="style.css">
+         <center>
+            <!-- Carousel for cryptocurrencies images on homepage-->
+            <div id="cryptoCarousel" class="carousel slide" data-ride="carousel" style= "margin-top: 50px;">
+               <!-- Indicators for carousel-->
+               <ol class="carousel-indicators">
+                  <li data-target="#cryptoCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#cryptoCarousel" data-slide-to="1"></li>
+                  <li data-target="#cryptoCarousel" data-slide-to="2"></li>
+                  <li data-target="#cryptoCarousel" data-slide-to="3"></li>
+                  <li data-target="#cryptoCarousel" data-slide-to="5"></li>
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <img src="images/bitcoin.gif" alt="Bitcoin" class= "img-responsive" style= "height: 500px; width: 1500px">
+                     <div class="carousel-caption">
+                        <h3>Bitcoin</h3>
+                        <h3> Founder: Satoshi Nakamoto </h3>
+                        <h4> Transaction time 10 minutes</h4>
+                        <h4> Consensus: Proof of work </h4>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/ethereum.png" class= "img-responsive" alt="Ethereum" style= "height: 500px; width: 1500px">
+                     <div class="carousel-caption">
+                        <h4> Founder: Vitalik Butetrin </h4>
+                        <h4>Transaction time 30 seconds</h4>
+                        <h4>Current Consensus: Proof of work</h4>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/litecoin.png"  alt="Litecoin" style= "height: 500px; width: 1300px">
+                     <div class="carousel-caption">
+                        <h4>
+                        Founder: Charlie Lee </h3>
+                        <h3>Litecoin</h3>
+                        <h4>Transaction time 2:30 minutes</h4>
+                        <h4> Consensus: Proof of work </h4>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/rchain-cover.png" alt="Rchain" style= "height: 500px; width: 1500px">
+                     <div class="carousel-caption">
+                        <h3>Founder: Lucius Meredith </h3>
+                        <h3>RChain </h3>
+                        <h4> Consensus: Proof of stake</h4>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/cardano.png" alt="Rchain" style= "height: 500px; width: 1500px">
+                     <div class="carousel-caption">
+                        <h4> Founder: Charles Hoskinson </h4>
+                        <h3>Consensus: Proof of stake Ouroboros </h3>
+                     </div>
+                  </div>
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#cryptoCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#cryptoCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                  </a>
+               </div>
+            </div>
+            </div>
+         </center>
+         <!-- Create container for bitcoin -->
+         <div class="container-fluid" style="padding: 50px; background: url('images/bitcoin.jpg');">
+            <div class= "row">
+               <div class="col-md-3 text-left" style="padding: 50px;">
+                  <h1 style="color: white; margin-top: 100px;"> A brief introduction to Bitcoin </h1>
+               </div>
+               <div class="col-md-6 text-left" style="padding: 50px; background-color:#b2b2b2; color: black;  margin-bottom: 75px;">
+                  <p>
+                     Bitcoin is a cryptocurrency that uses public-key cryptography. In public key cryptography, there are two keys used for secret communication between sender and receiver. Both the receiver and sender have their own unique public and private keys.
+                  <ul>
+                     <li>  A <mark> public key </mark> is known to everybody. This key is used to send and receive funds from someone. It can be taken as a digital address of an individual. </li>
+                     <li> A <mark> private key </mark> is private to the person. All the users have their individual private key which is only known by them. This key is utilized by the owner of the account to spend money. Someone unable to verify themselves with their private key will not be able to spend the money in their account.  </li>
+                  </ul>
+                  Bitcoin was released in 2009 as an open source software by a person or group of people known as Satoshi Nakamoto. Bitcoin’s white paper (a proposal paper) was published by Nakamoto in 2008 on Bitcoin website. The purpose of developing this cryptocurrency was to eliminate the dependency of a centralized organization or bank. Therefore, Bitcoin is a decentralized peer-to-peer payment system which means people can transfer money to each other directly without going to a bank or a centralized authority. To completely understand, how Bitcoin payment system works, it is crucial to understand an important technology known as Blockchain.
+                  </p>
+                  <br>
+               </div>
+               <div class="col-md-3">
+                  <img src="Buy-stuff-with-Bitcoin.png" class="img-responsive" alt="bitcoin">
+               </div>
+            </div>
+         </div>
+      
+        
+         <!-- Create container for threats -->
+         <div class= "container-fluid" id="threats" style="background-color:#e6f4f4; color: black; ">
+            <div class="row">
+               <div class="col-md-3" style="margin-top: 180px;">
+                  <h1> Threats to cryptocurrencies</h1>
+               </div>
+               <div class="col-md-9" style="margin-top: 180px;">
+                  <h1 style= "color:#c267c6;"> Losing money forever </h1>
+                  Cryptocurrencies being digital assets create a concern of losing money forever. In November 2017, a curious Ethereum software developer became the sole owner of multisignature wallets accidently while fixing a security flaw in Ethereum code. Multisignature wallets are the wallets which require more than one users’ signatures to transfer funds. To fix the bug the developer deleted the code locking the multisignature wallets permanently causing loss of $300m. A hard fork is being considered to resolve the issue. A hard fork is an update in the version of protocol to fix any security flaws, adding new functionality or reversing transactions. A hard fork makes previous valid blocks or transactions invalid or vice versa. After a hard fork has been implemented all the nodes need to update the software, nodes running old software protocol are not accepted.
+                  <h1 style= "color: #c267c6;"> How cryptocurrencies are stolen and ways to avoid it</h1>
+                  There are number of stories of cryptocurrencies being hacked which causes a security concern to its users. For instance, in December 2017, a Bitcoin mining service NiceHash was hacked resulting $62m loss. However, the cryptocurrencies are very secure to use. The reason of these hacks are human negligibility and ignorance not many people knowing how cryptocurrencies are used. As discussed earlier the cryptocurrencies rely on public and private keys and it is almost impossible for a hacker to hack someone’s private key of their digital wallet. <br>
+                  There are two ways of buying cryptocurrencies <br> <br> 
+                  1.  Making a wallet where private key is protected by the owner. <br>
+                  2.  Creating an account with a third party like CoinBase. The third party takes care of private key and owner takes care of their login details only.
+                  <br> <br>
+                  <h3 style= "color: #4462ba;"> Stealing account password </h3>
+                  The only way a wallet can be hacked is that the hacker tricks the wallet owner to reveal their login details or breaks into owner’s email account, resets account password and impersonates to the third party as the owner of the account.  <br>
+                  --> This can be avoided by enabling the two-factor authentication. <br>
+                  <h3 style= "color: #4462ba;"> Private key is revealed by owner </h3>
+                  An owner reveals their private key. In a famous example, somebody showed their private key on TV and lost all their money because a hacker saw the key and emptied the wallet immediately.
+                  --> It can be avoided by never disclosing private key to anyone, keeping the key written on a paper and kept safe offline. <br>
+                  <h3 style= "color: #4462ba;"> Hacker impersonates as a company </h3>
+                  Hacker will make fake websites of legitimate companies and ask people to transfer funds which are sent to hacker wallet. Once the money has been transferred, it cannot be recovered. <br>
+                  --> This can be avoided by checking the wallet address before transferring funds. <br>
+                  <h3 style= "color: #4462ba;"> Relying on an insecure third party </h3>
+                  A wallet should be opened only with a trusted service. If trusted third party is not secure like NiceHash, money is never safe. <br>
+                  <h3 style= "color: #4462ba;"> The Exit Scam </h3>
+                  This is a scam where a company provides services of trade or exchange and vanishes with all the user’s funds or pretends to be hacked. In reality, the owners of the company do exit scam and vanish with people’s money.  <br>
+                  --> To avoid this as mentioned above a wallet should be created only with a trusted company. <br> 
+                  In essence, it is unfair to blame cryptocurrencies for these hacks. Cryptocurrencies are quite safe to use if user knows how to manage their digital money.
+                  <hr>
+               </div>
+            </div>
+         </div>
+         <!-- Create container for comments plugin-->
+         <div class="container text-center">
+            <script>
+               //Create function for users to login using their facebook account and comment
+               (function(data, s, id) {
+               var js, fjs = data.getElementsByTagName(s)[0];
+               if (data.getElementById(id)) return;
+               js = data.createElement(s); js.id = id;
+               js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+               fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <!-- include href(link) to website, ordering of comments and number of comments on display -->
+            <div class="fb-comments" data-href="wwww.tuneincrypto.com"  data-order-by="social" data-numposts="7"></div>
+         </div>
+
+<!-- Include footer -->
+         <?php
+         footer ();
+         ?>

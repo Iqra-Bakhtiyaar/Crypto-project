@@ -1,0 +1,74 @@
+  <?php 
+  include 'navigation.php';
+head("Bitcoin");
+navigate("Bitcoin");
+?>
+ <link rel="stylesheet" type="text/css" href="style.css">
+         <!-- bitcoin -->
+         <div id="bitcoin">
+         <div class= "container-fluid" style="background-image: url('images/bitcoin-background-10.jpg')" >
+            <div class= "row">
+               <div class="col-md-3 text-left" style="padding: 50px; margin-top: 130px">
+                  <h1 style="color: white;"> How bitcoins are created </h1>
+               </div>
+               <div class="col-md-7 text-left" style="padding: 50px; background-color: white; color: black; margin: 150px 0px 30px 0px">
+                  <p> The driving force for a Blockchain is its consensus. A consensus is a process of an agreement between participants.  The consensus for bitcoin Blockchain is called <b>proof of work</b>. Proof of work is a protocol that shields the system against cyber-attacks such as denial of service attacks by creating complex mathematical problem known as proof of work problem for miners to solve. <br>
+                     Miners are the people who run Bitcoin software on their computers.  Whenever a transaction is made, it needs to be verified by miners. All the nodes or computers have a ledger that needs to be updated after 10 minutes. All the miners compete to solve the problem and whoever solves the problem first announces to the entire network that they have found the solution. The miner who solved the puzzle first then verifies all the transactions occurred during those 10 minutes. This new block of transaction is distributed among all the computers and if more than 50% computers agree on the transactions made, a new block is added to the Blockchain. <br> Miners are rewarded by protocol with Bitcoins and this is how new Bitcoins are created, rewarding also creates an incentive for other people to mine. The technical detail behind mining will be discussed later. </br>
+                     Once a transaction is added to Blockchain it cannot be changed. It will stay on the ledger as long as Blockchain exists. The proof of work consensus for bitcoin is distributed and trustless meaning that unlike traditional payment system sender and receiver do not have to trust each other.
+                  </p>
+                  <hr>
+               </div>
+            </div>
+            <div class= "row">
+               <div class="col-md-3 text-left" style="padding: 50px;">
+                  <h1 style="color: white;"> Benefits of bitcoin </h1>
+               </div>
+               <div class="col-md-7 text-left" style="padding: 50px; background-color: white; color: black; margin: 30px 0px 30px 0px">
+                  <p> 
+                  <h2> Quick cheap and easy </h2>
+                  There are number of benefits of this technology. First of all, sending money has become cheaper, quicker and easy. If we have to send money through our bank to someone in another country. It takes a lot of time as this money has to go thorough more than one banks and all the banks have their separate ledger and separate systems. Therefore, it takes time to get to receiver and also sender has to pay the costs of banks services but Bitcoin makes it easy as sender is directly sending money to the receiver. There is no long wait and no extra cost as the payment system is peer-to-peer. 
+                  <h2> Trustworthy </h2>
+                  Since Bitcoin uses a transparent ledger that is publically available to see and it keeps a record of all the transactions. Therefore, Bitcoin delivers a trustless solution because to make a transaction participants do not have to trust each other as the system itself is trustworthy. No one can cheat, as it will require a huge effort to hack all the computers running Blockchain. The Blockchain system assures that no money his spent twice. Due to its transparency people can put in their trust. </p> 
+                  <hr>
+               </div>
+            </div>
+            <div class= "row">
+               <div class="col-md-3 text-left" style="padding: 50px;">
+                  <h1 style="color: white;"> Why bitcoin is valued </h1>
+               </div>
+               <div class="col-md-7 text-left" style="padding: 50px; background-color: white;  color: black; margin: 30px 0px 30px 0px">
+                  <p> Bitcoin is considered as gold currency. Like any other currency its value lies in economics principles, utility, supply and demand. 
+                  <h2> Why is it in demand </h2>
+                  This currency started to gain value because people put their trust in the currency. Bitcoin demand is high because of its utility. People can transfer money or pay for goods efficiently without any centralized authority and caring about international borders. Moreover, because of its increasing value people also buy Bitcoins as an asset like gold is bought because it has greater value. 
+                  <h2> Wide use </h2>
+                  Although, there are many cryptocurrencies available but Bitcoin is widely used and trusted. The digital currency is now accepted by thousands of merchants across the globe. As more and more people are becoming aware of Bitcoins and buying the currency, its value is increasing because it is widely accepted now. 
+                  <h2>  Scarcity </h2>
+                  Bitcoin supply is limited as the software is designed in a way that only a limited number of Bitcoins can be mined. As of March 2017, there were 16.2m Bitcoins in circulation and maximum <mark> 21 million </mark> Bitcoins can be mined. The year expected for the end of mining Bitcoin is <mark> 2140 </mark>. If we apply the simple rule of economics, something that has a higher demand but limited supply, will have greater price.
+                  </p>
+                  <img src="images/chart.png" alt="Price history chart of bitcoin" class="img-thumbnail" width="700px" lenght="600px" style= "margin-top: 50px; border-style: groove; margin-bottom: 30px;"> 
+                  <div class="caption">
+                     <p>  In 2009, Bitcoin value was $0 and in 2010 Bitcoin’s highest value was $0.39. </p>
+                     <hr>
+                  </div>
+               </div>
+            </div>
+            <div class="row" style= "color: white;">
+               <div class="col-md-3">
+                  <h1 style="color: white; margin-top: 50px;"> Issues with bitcoin </h1>
+               </div>
+               <div class="col-md-7 text-left" style="padding: 50px; background-color:white; color: black; margin: 30px 0px 30px 0px">
+                  <h2> Although, bitcoin is leading the race of cryptocurrencies but it has some drawbacks too </h2>
+                  <h2> Transaction time issue </h2>
+                  A block is added to Bitcoin’s Blockchain after 10 minutes which results a transaction confirmation time of 10 minutes. A person can wait for 10 minutes if they are transferring money internationally, but this transaction time is very slow if one wants to pay for their grocery bills in a supermarket with Bitcoin.  
+                  <h2> Scalability issue </h2>
+                  The size of a block of Blockchain is 1MB. Only 7 transactions can be made per second which creates a scalability issue. This Blockchain size cannot be expanded because this is how the protocol is programmed. The demand of using Bitcoin Blockchain ledger is rising but Bitcoin cannot handle the volume of transactions.
+                  <h2>  Promoting black money </h2>
+                  Bitcoin has opened a door for black money as there is no centralized authority or government to control or surveil who is making transactions and what they are paying for because of the anonymity of the participants.
+                  <hr>
+               </div>
+            </div>
+         </div>
+         <!-- Include footer -->
+         <?php
+         footer ();
+         ?>
