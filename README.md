@@ -1,1 +1,2 @@
-# E-commerce-project
+# Cryptocurrencies project
+A research project on cryptocurrencies
